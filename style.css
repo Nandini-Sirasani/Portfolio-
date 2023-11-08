@@ -1,0 +1,410 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Common styles for header and navigation */
+header {
+    display: flex;
+    justify-content: flex-end;
+
+    padding-bottom: 10px;
+    padding-top: 40px;
+    background-color: #333;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* Landing page styles */
+body {
+    /* filter: brightness(50%); */
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.landing-content {
+    text-align: center;
+    padding: 20% 0;
+    /* color: white; */
+}
+
+.landing-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.landing-text {
+    font-size: 1.5rem;
+    animation: fadeInUp 2s 0.5s ease-in-out;
+}
+
+/* About Me section styles */
+
+.me{
+    border:1px solid rgb(239, 228, 228);
+     box-shadow: 1px 1px 10px grey;
+    padding: 20px;
+    margin-right: 200px;
+}
+.section-text {
+    color: rgb(237, 177, 177);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+/* Animation for section titles */
+.section-title {
+    color:peachpuff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px white ;
+    
+    animation: fadeInUp 1.5s ease-in-out;
+}
+#about{
+    margin-left:60%;
+    margin-top:7%;
+}
+tr:hover{
+    box-shadow: 1px 1px 100px black;
+}
+#education{
+    margin-left:45%;
+    width:50%;
+    color: azure !important;
+}
+#projects{
+    width:50%;
+    margin-left: 45%;
+    color: aliceblue ;
+    line-height: 25px;
+    margin-top:5%;
+}
+#landing{
+
+    margin-top:-2%;
+    color: aliceblue;
+}
+
+.certification-details {
+    display: inline-block;
+    width: 48%; /* Adjust the width as needed */
+    margin: 10px;
+    float:left;
+    box-sizing: border-box;
+    margin-top: 5%;
+    position: relative; /* Required for image zoom effect */
+    overflow: hidden; /* Hide overflow to contain zoom effect */
+    transition: transform 0.3s; /* Add smooth transition */
+}
+
+.certificate-image {
+   margin-left:5%;
+    max-width: 100%;
+    height: 320px;
+   
+    transition: opacity 0.5s ease, transform 0.3s; 
+}
+
+.certification-details:hover {
+    transform: scale(1.1); /* Zoom in by 10% on hover */
+}
+.certification-details:hover .certificate-image {
+    transform: scale(1.1);
+}
+
+.certification-details.fade-in .certificate-image {
+    opacity: 1; /* Fade-in effect */
+}
+
+#certification-title {
+    margin-left: 40%;
+    color: white;
+    margin-top: 2%;
+}
+/* #contact{
+    width:40%;
+    color :white;
+    margin-left:45%;
+    margin-top:10%;
+} */
+/* Form groups */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    width: 120px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/* Keyframes for animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Other section styles and media queries go here */
+
+/* Existing CSS styles */
+
+/* Mobile Menu Styles */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+   .header{
+    font-size: 20px;
+   }
+   #about{
+    margin-left:20%;
+   }
+   #education{
+    margin-top:25%;
+    margin-left:20%;
+   }
+   #projects{
+    /* margin-top:25%; */
+    width:70% !important;
+    margin-left:20%;
+    margin-top:5%;
+   }
+}
+@media (max-width: 560px) {
+   .header{
+    font-size: 8px;
+   }
+   #about{
+    margin-left:20%;
+   }
+   #education{
+    margin-left:20%;
+   }
+    #projects{
+        width:100% !important;
+        margin-left:20%;
+        margin-top:5%;
+    }
+}
+.education-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.education-table th,
+.education-table td {
+    border: 1px solid grey;
+    padding: 8px;
+    text-align: left;
+}
+
+.education-table th {
+    background-color: #2c2b2b;
+    color: white;
+}
+
+/* Apply alternating row colors */
+.education-table tbody tr:nth-child(odd) {
+    background-color: rgb(74, 70, 70);
+    color: white;
+}
+
+.education-table tbody tr:nth-child(even) {
+    background-color: #333; /* Cement color */
+    color: white;
+}
+.education-table tbody tr:hover {
+    transform: scale(1.05); /* Zoom in by 5% */
+    cursor: pointer;
+}
+
+/* Define custom button styles */
+.custom-btn {
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor:pointer;
+    font-weight: bold;
+    margin: 5px;
+    background-color: transparent;
+    color: inherit; /* Use the color from the parent element */
+    text-decoration: none; /* Remove default underline for links */
+   
+}
+
+/* Apply btn-success style */
+.success-btn {
+    border-color: #28a745;
+}
+
+.success-btn:hover {
+    background-color: #28a745;
+    color: white; /* Change text color on hover */
+}
+
+/* Apply btn-primary style */
+.primary-btn {
+    border-color: #007bff;
+}
+
+.primary-btn:hover {
+    background-color: #007bff;
+    color: white; /* Change text color on hover */
+}
+
+.project-description {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color:black;
+    background-color: #ffda6e;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+#contact {
+    width: 40%;
+    color: white;
+    margin-left: 45%;
+    margin-top: 10%;
+    background-color: rgba(0, 0, 0,0.2); /* Black with 75% transparency */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Center content */
+}
+
+.section-title {
+    text-align: center;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+input:hover,textarea:hover{
+    box-shadow: 1px 1px 10px grey;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:  rgba(0, 0, 0,0.2);
+    color: white;
+    /* text-align: center; */
+}
+
+.input-field:focus {
+    outline: none;
+}
+
+.submit-button {
+    background-color: #0a90f0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+   
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    box-shadow: 1px 1px 10px grey;
+    
+}
+a:hover{
+    text-shadow: 1px 1px 10px grey;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+span:hover{
+    box-shadow: 1px 1px 10px grey;
+}
+.buttons{
+    margin-top:2%;
+}
+#contact-me{
+    color:white;
+}
